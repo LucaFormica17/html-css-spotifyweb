@@ -9,6 +9,7 @@
 #spoti-body{
     height: calc(100vh - 75px);
     display: flex;
+    color: white;
 }
 
 #spoti-footer{
@@ -73,9 +74,6 @@ main{
     margin: 0 10px;
 }
 
-.col-2{
-    width: calc(100% / 6);
-}
 
 .content{
     width: 100%;
@@ -89,20 +87,44 @@ img{
     flex-wrap: wrap;
 }
 
+span{
+    display: none;
+    color: rgba(118,121,125,255);
+    margin: 5px 10px;
+}
 
+h2{
+    
+}
+
+h3{
+    
+}
+
+h4{
+    padding: 15px 0 0 10px;
+}
+
+h5{
+    color: rgba(118,121,125,255);
+}
 
 /* SIDEBAR */
 
-#spoti-sidebar img{
+.logo{
     padding: 10px;
 }
 
 .fixed{
-    height: 75px;
     position: fixed;
     left: 0;
     bottom: 75px;
     width: inherit;
+}
+
+.fixed span{
+    font-size: 12px;
+    margin-bottom: 10px;
 }
 
 .phone{
@@ -118,13 +140,52 @@ ul{
 }
 
 li{
-    font-size: 25px;
+    display: flex;
     padding: 5px 10px;
 }
 
-.fixed li:first-child{
-    font-size: 10px;
-    margin-left: 10px;
+.side-img{
+    width: 30px;
+    height: 30px;
+}
+
+.download-img{
+    width: 17px;
+    margin: 0 0 5px 8px;
+}
+
+.profile-img{
+    width: 30px;
+    height: 30px;
+    background-color: rgba(118,121,125,255);
+    border-radius: 50%;
+    margin: 10px 0 0 10px;
+}
+
+hr{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.create{
+    display: flex;
+}
+
+.create p{
+    margin-top: 20px;
+    color: rgba(118,121,125,255);
+}
+
+.fa-plus{
+    font-size: 20px;
+    background-color: rgba(118,121,125,255);
+    padding: 8px;
+    margin: 10px;
+}
+
+.play-ul li{
+    padding: 5px 10px;
+    color: rgba(118,121,125,255);
 }
 
 
@@ -136,8 +197,6 @@ header .col-12{
 }
 
 header .content{
-    width: 200px;
-    height: 50px;
     margin: 10px 0;
     text-align: end;
     background-color: white;
@@ -161,42 +220,29 @@ header .content{
 
 
 .recent .content{
-    height: 100px;
-    background-color: aqua;
+
 }
 
 /* for-us section */
 
 .for-us .content{
-    height: 100px;
-    background-color: yellowgreen;
+
 }
 
 /* popular section */
 
 .popular .content{
-    height: 100px;
-    background-color: blanchedalmond;
+
 }
 
 
 /* FOOTER */
 
 #spoti-footer .content{
-    background-color: white;
-    height: 50px;
     margin-top: 10px;
-    
 }
 
 
-
-
-
-.bg-white{
-    height: 50px;
-    background-color: white;
-}
 
 
 /**************************************************************** 
@@ -208,6 +254,14 @@ media query breakpoint 576px
 
     #spoti-sidebar{
         width: 200px;
+    }
+
+    .margin-l{
+        margin-left: 10px;
+    }
+
+    .logo{
+        width: 80%;
     }
 
     .phone{
