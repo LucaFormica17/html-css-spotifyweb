@@ -69,11 +69,15 @@ main{
     margin: 10px;
 }
 
-.col-4{
-    width: calc(100% / 3 - 20px);
-    margin: 0 10px;
+.col-player,
+.col-audio{
+    width: 150px;
 }
 
+.col-range{
+    width: calc(100% - 300px);
+    margin: 0 auto;
+}
 
 .content{
     width: 100%;
@@ -151,7 +155,7 @@ li{
     height: 30px;
     background-color: rgba(118,121,125,255);
     border-radius: 50%;
-    margin: 10px 0 0 10px;
+    margin-top: 10px;
 }
 
 hr{
@@ -237,12 +241,108 @@ header p{
 
 /* FOOTER */
 
-#spoti-footer .content{
+#spoti-footer .row{
+    justify-content: space-between;
+}
+
+.player-img{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding-right: 20px;
+}
+
+#spoti-footer img{
+    width: 40px;
     margin-top: 10px;
 }
 
+.footer-title{
+    line-height: 1.1;
+    color: white;
+    font-size: 12px;
+}
 
+.footer-subtitle{
+    color: rgba(118,121,125,255);
+    font-size: 10px;
+    margin-left: 10px;
+}
 
+.player-img .item{
+    color: rgba(118,121,125,255);
+    margin-left: 10px;
+}
+
+.item br{
+    display: block;
+}
+
+.range{
+  margin-top: 10px;  
+}
+
+.range .item{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 150px;
+    margin: 0 auto;
+    color: white;
+}
+
+.range .item i{
+    padding: 0 5px;
+}
+
+.range .item i:nth-child(3){
+    font-size: 25px;
+    padding: 0 5px;
+}
+
+.range-bar{
+    display: flex;
+    align-items: center;
+    width: 150px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+.range-bar p{
+    color: white;
+    font-size: 10px;
+}
+
+.bar{
+    height: 2px;
+    width: 100%;
+    margin: 0 5px;
+    background-color: rgba(118,121,125,255);
+    border-radius: 30px;
+}
+
+.white-bar{
+    height: 2px;
+    width: 20%;
+    background-color: white;
+}
+
+.audio{
+    display: flex;
+    align-items: center;
+    margin: 30px 5px 0 0;
+}
+
+.audio .item i{
+    font-size: 12px;
+    color: white;
+    padding: 2px;
+}
+
+.audio .bar{
+    width: 50%;
+}
 
 /**************************************************************** 
 media query breakpoint 576px
@@ -275,6 +375,12 @@ media query breakpoint 576px
         width: calc(100vw - 200px);
         margin-left: 200px;
     }
+    /* footer section */
+
+    .range-bar, .range .item{
+        width: 200px;
+    }
+
 
 }
 
@@ -291,6 +397,32 @@ media query breakpoint 768px
         width: calc(100% / 4 - 20px);
     }
 
+    /* footer section */
+
+    .col-player,
+    .col-audio{
+        width: 200px;
+    }
+
+    .player-img{
+        padding-right: 0;
+    }
+
+    .item br{
+        display: none;
+    }
+
+    .player-img .item i{
+        padding: 0 5px;
+    }
+
+    .range-bar{
+        width: 80%;
+    }
+
+    .audio .item i{
+        padding: 4px;
+    }
 }
 
 
@@ -305,5 +437,10 @@ media query breakpoint 992px
     .popular .col-6{
         width: calc(100% / 6 - 20px);
     }
-    
+
+    /* footer section */
+
+    .range-bar{
+        width: 60%;
+    }
 }
