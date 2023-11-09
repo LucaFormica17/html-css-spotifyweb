@@ -46,6 +46,7 @@ header{
     position: fixed;
     top: 0;
     right: 0;
+    z-index: 1;
 }
 
 main{
@@ -249,6 +250,23 @@ main h5{
     font-size: 12px;
 }
 
+.hover-img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.hover-img i{
+    width: 100%;
+    height: 100%;
+    font-size: 60px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY( -20%);
+    color: transparent;
+}
+
 /* list section */
 
 .list ul{
@@ -327,7 +345,7 @@ main h5{
 .range .item{
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
     width: 150px;
     margin: 0 auto;
     color: white;
@@ -339,7 +357,7 @@ main h5{
 
 .range .item i:nth-child(3){
     font-size: 25px;
-    padding: 0 5px;
+    padding: 0 5px 10px 5px;
 }
 
 .range-bar{
@@ -347,7 +365,6 @@ main h5{
     align-items: center;
     width: 150px;
     margin: 0 auto;
-    padding-top: 10px;
 }
 
 .range-bar p{
@@ -356,7 +373,7 @@ main h5{
 }
 
 .bar{
-    height: 2px;
+    height: 4px;
     width: 100%;
     margin: 0 5px;
     background-color: rgba(118,121,125,255);
@@ -364,9 +381,10 @@ main h5{
 }
 
 .white-bar{
-    height: 2px;
+    height: 4px;
     width: 20%;
     background-color: white;
+    position: relative;
 }
 
 .audio{
@@ -384,6 +402,72 @@ main h5{
 .audio .bar{
     width: 50%;
 }
+
+
+.pointer{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: transparent;
+    position: absolute;
+    left: 90%;
+    top: -7px;
+}
+
+/*****************************************************************
+HOOVER 
+******************************************************************/
+
+
+.hover-img img:hover{
+    opacity: 0.5;
+    color: white;
+}
+
+header p:hover{
+    font-size: 14px;
+    padding: 10px 35px;
+}
+
+li:hover{
+    color: white;
+}
+
+li span:hover{
+    color: white;
+}
+
+.create p:hover{
+    color: white;
+}
+
+.fa-plus:hover{
+    background-color: white;
+}
+
+.footer-subtitle:hover{
+    text-decoration: underline;
+}
+
+.player-img i:hover{
+    color: lightgrey;
+}
+
+.range .item i:nth-child(3):hover{
+    font-size: 28px;
+    padding: 0 4px 7px 4px;
+}
+
+.white-bar:hover{
+    background-color: yellowgreen;
+}
+
+.pointer:hover{
+    background-color: white;
+}
+
+
+
 
 /**************************************************************** 
 media query breakpoint 576px
@@ -422,7 +506,7 @@ media query breakpoint 576px
         width: 200px;
     }
 
-
+    
 }
 
 
@@ -435,7 +519,7 @@ media query breakpoint 768px
     .recent .col-6,
     .for-us .col-6,
     .popular .col-6{
-        width: calc(100% / 4 - 20px);
+        width: calc(100% / 4 - 15px);
     }
 
     /* footer section */
@@ -476,7 +560,7 @@ media query breakpoint 992px
     .recent .col-6,
     .for-us .col-6,
     .popular .col-6{
-        width: calc(100% / 6 - 20px);
+        width: calc(100% / 6 - 15px);
     }
 
     /* footer section */
